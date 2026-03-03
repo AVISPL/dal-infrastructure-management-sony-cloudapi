@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<ruleset name="dal_infrastructure_management_sdvoe PMD ruleset"
+         xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
+
+    <description>
+        This ruleset defines the PMD rules for project "dal_infrastructure_management_sdvoe".
+    </description>
+
+
+    <!-- many more rules are available at https://pmd.github.io/pmd-6.13.0/pmd_rules_java.html -->
+</ruleset>

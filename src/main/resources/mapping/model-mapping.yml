@@ -1,0 +1,49 @@
+models:
+  - model:
+      name: Generic
+      vendor: Sony
+      filter: get("deviceId") != null
+      node: devices
+      mapping:
+        type: ""
+        category: ""
+        serialNumber: at("/serial")?.asText()
+        deviceId: at("/deviceId")?.asText()
+        deviceName: at("/deviceName")?.asText()]
+        deviceMake: ""
+        deviceModel: at("/modelName")?.asText()
+        deviceOnline: false
+      properties:
+        DisplayResolutionHeight: at("/displayResolution/height")
+        DisplayResolutionWidth: at("/displayResolution/width")
+      control:
+        Reboot:
+          type: Button
+          gracePeriod: 0
+          label: Reboot
+          labelPressed: Rebooting
+  - model:
+      name: NetworkInterface
+      vendor: Sony
+      filter: false
+      properties:
+        Type: at("/type")
+        MACAddress: at("/macAddress")
+        IPv4Address: at("/ipv4Address")
+        IPv6Address: at("/ipv6Address")
+  - model:
+      name: APKEntry
+      vendor: Sony
+      filter: false
+      properties:
+        PackageName: at("/packageName")
+        VersionCode: at("/versionCode")
+        VersionName: at("/versionName")
+        AppName: at("/appName")
+  - model:
+      name: APKPermission
+      vendor: Sony
+      filter: false
+      properties:
+        Permission: at("/permission")
+        Status: at("/status")
